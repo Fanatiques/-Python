@@ -45,11 +45,11 @@ def sales_over_time(sales_data):
 
 result_total_sales_per_product = total_sales_per_product(sales_data) # создаем словарь с результатами функции total_sales_per_product
 max_value_per_product = max(result_total_sales_per_product, key=result_total_sales_per_product.get) #находим продукт с максимальной суммой продаж
-print(max_value_per_product) #выводим продукт с максимальной суммой продаж
+print('Продукт, принесший наибольшую выручку: ' +max_value_per_product) #выводим продукт с максимальной суммой продаж
 
 result_sales_over_time = sales_over_time(sales_data) # создаем словарь с результатами функции sales_over_time
 max_value_per_date = max(result_sales_over_time, key=result_sales_over_time.get) #находим дату с максимальной суммой продаж
-print(max_value_per_date) #выводим дату с максимальной суммой продаж
+print('День, в который было больше всего продаж: ' +max_value_per_date) #выводим дату с максимальной суммой продаж
 
 x = np.array(list(result_total_sales_per_product.keys())) #создаем массивы для графиков
 y = np.array(list(result_total_sales_per_product.values()))
